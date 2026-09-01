@@ -54,11 +54,11 @@ python3 -m http.server 8080
 ## 分层词汇体系
 
 - 学术精学层：1,000 个 IELTS / TOEFL 高频学术词，覆盖 78 个学术主题，包含定义、同义词和语境例句。
-- CEFR 识别层：由 7,988 条源记录整理为 7,035 个不区分大小写的独立 A1–C2 词条，用于补齐基础词和检查识别词汇范围。
-- 每天按学习天数轮换 20 个词，50 天完成第一轮。
+- CEFR 识别层：合并A1–B2基础词表与C1/C2补充词表，去重后共8,827个独立词条。
+- 每天深度学习20个学术词，50天完成第一轮；每天快速识别50个CEFR词，约177天覆盖完整识别词库。
 - 支持词库切换、搜索、主题筛选、难度/CEFR筛选、英文朗读和“已掌握”状态。
 - 学术精学词包含词性、难度、主题、同义词、英文定义和语境例句；CEFR识别词包含等级与词性。
-- 数据来自 [WordLevel学术词库](https://github.com/gungorkaya-eng/toefl-essential-vocabulary-dataset)和[Words CEFR Dataset](https://github.com/Maximax67/Words-CEFR-Dataset)，均采用 MIT License。详情见 [ATTRIBUTION.md](ATTRIBUTION.md)。
+- 数据来自 [WordLevel学术词库](https://github.com/gungorkaya-eng/toefl-essential-vocabulary-dataset)、[Words CEFR Dataset](https://github.com/Maximax67/Words-CEFR-Dataset)与[Octanove C1/C2 Profile](https://github.com/openlanguageprofiles/olp-en-cefrj/blob/master/octanove-vocabulary-profile-c1c2-1.0.csv)。详情与许可证见 [ATTRIBUTION.md](ATTRIBUTION.md)。
 
 ## 发布到 GitHub Pages
 
