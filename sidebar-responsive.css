@@ -8,7 +8,7 @@ body.course-mode .course-nav .nav-item{display:grid;grid-template-columns:30px m
 body.course-mode .course-nav .nav-item:hover{border-color:var(--primary);background:#f5fffd}
 body.course-mode .course-nav .nav-item.active{border-color:var(--primary);background:var(--primary-soft)}
 body.course-mode .course-nav .nav-item.completed:not(.active){background:#f0fdf4}
-body.course-mode .course-nav .nav-copy{min-width:0;text-align:left}
+body.course-mode .course-nav .nav-copy{width:100%;min-width:0;justify-self:stretch;text-align:left}
 body.course-mode .course-nav .nav-copy strong{font-size:15px;line-height:1.3}
 body.course-mode .course-nav .nav-copy small{margin-top:3px;font-size:11px;line-height:1.35;color:var(--muted)}
 body.course-mode .course-nav .nav-duration{width:auto;white-space:nowrap;text-align:right;font-size:12px;font-weight:800;color:var(--primary)}
