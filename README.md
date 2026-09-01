@@ -51,13 +51,14 @@ python3 -m http.server 8080
 - 使用“导出学习数据”定期备份。恢复时选择此前导出的 JSON 文件即可。
 - 升级前创建的任务与模考数据会自动兼容，不需要重新录入。
 
-## 第一阶段核心词库
+## 分层词汇体系
 
-- 内置 1,000 个 IELTS / TOEFL 高频学术词，覆盖 78 个学术主题。这是第一阶段学术核心词，不代表 IELTS 的全部词汇。
+- 学术精学层：1,000 个 IELTS / TOEFL 高频学术词，覆盖 78 个学术主题，包含定义、同义词和语境例句。
+- CEFR 识别层：由 7,988 条源记录整理为 7,035 个不区分大小写的独立 A1–C2 词条，用于补齐基础词和检查识别词汇范围。
 - 每天按学习天数轮换 20 个词，50 天完成第一轮。
-- 支持全库搜索、主题筛选、难度筛选、英文朗读和“已掌握”状态。
-- 每条词汇包含词性、难度、主题、同义词、英文定义和语境例句。
-- 数据来自 [WordLevel TOEFL & IELTS Academic Vocabulary Dataset](https://github.com/gungorkaya-eng/toefl-essential-vocabulary-dataset)，采用 MIT License。详情见 [ATTRIBUTION.md](ATTRIBUTION.md)。
+- 支持词库切换、搜索、主题筛选、难度/CEFR筛选、英文朗读和“已掌握”状态。
+- 学术精学词包含词性、难度、主题、同义词、英文定义和语境例句；CEFR识别词包含等级与词性。
+- 数据来自 [WordLevel学术词库](https://github.com/gungorkaya-eng/toefl-essential-vocabulary-dataset)和[Words CEFR Dataset](https://github.com/Maximax67/Words-CEFR-Dataset)，均采用 MIT License。详情见 [ATTRIBUTION.md](ATTRIBUTION.md)。
 
 ## 发布到 GitHub Pages
 
