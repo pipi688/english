@@ -22,7 +22,9 @@
 .vocab-word strong{font-size:17px;color:var(--text)}
 .vocab-word small{margin-top:2px;color:var(--muted);font-size:11px}
 .vocab-row em,.dictation-row em{font-family:Georgia,serif;color:var(--muted)}
-.vocab-meaning{font-weight:700}
+.vocab-meaning strong,.vocab-meaning small,.dictation-meaning strong,.dictation-meaning small{display:block}
+.vocab-meaning strong,.dictation-meaning strong{font-weight:800;color:var(--text)}
+.vocab-meaning small,.dictation-meaning small{margin-top:3px;color:var(--muted);font-size:11px;line-height:1.4}
 .vocab-example{color:var(--muted);font-size:13px;line-height:1.5}
 .vocab-known-button{min-height:38px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--primary-strong);font:inherit;font-size:12px;font-weight:800;cursor:pointer}
 .vocab-known-button.active{background:#dcfce7;border-color:#86c99a;color:#166534}
@@ -38,4 +40,5 @@
 .dictation-row.incorrect{box-shadow:inset 4px 0 #dc3545}
 .dictation-answer{color:var(--primary-strong)}
 .dictation-result{position:sticky;left:0;padding:12px 16px;min-height:48px;background:#fff;font-weight:800;color:var(--primary-strong)}
+@media(max-width:1400px){.vocab-table-head,.vocab-row{grid-template-columns:42px 54px minmax(130px,.75fr) 62px minmax(220px,1.5fr) 92px;min-width:0}.vocab-table-head span:nth-child(6),.vocab-row .vocab-example{display:none}}
 @media(max-width:767px){.vocabulary-workspace{padding:16px}.word-bank-head p{font-size:13px}.vocabulary-mode-tabs button{flex:1;padding:0 8px}.dictation-toolbar{align-items:flex-start;flex-direction:column}.dictation-toolbar .mini-button{width:100%}}
