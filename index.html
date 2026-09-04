@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="IELTS Listening 与 Academic Reading 逐句音频学习平台">
-  <title>IELTS Sentence Lab</title><link rel="stylesheet" href="mvp.css?v=1.1.3">
+  <title>IELTS Sentence Lab</title><link rel="stylesheet" href="mvp.css?v=1.3.0">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -29,6 +29,13 @@
     <button type="button" class="audio-preview" id="vocabAudio">🔊 播放 Original Sentence Audio</button>
     <div class="modal-actions"><button value="cancel" class="secondary-btn">取消</button><button type="button" id="saveVocab" class="primary-btn">保存</button></div>
   </form></dialog>
+  <dialog id="skipDictationDialog" aria-labelledby="skipDictationTitle">
+    <form method="dialog" class="modal-card confirm-card">
+      <div><p class="eyebrow">FIRST DICTATION</p><h2 id="skipDictationTitle">还没有完成第一次听写</h2></div>
+      <p>现在查看英文吗？直接查看将跳过本句听写，不生成听写差异。</p>
+      <div class="modal-actions"><button value="continue" class="secondary-btn">继续听写</button><button value="skip" class="primary-btn">直接查看英文</button></div>
+    </form>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="mvp.js?v=1.1.2" defer></script>
+  <script src="mvp.js?v=1.3.1" defer></script>
 </body></html>
