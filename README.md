@@ -24,7 +24,7 @@ macOS 也可以双击项目根目录的 `打开雅思学习工作台.command`，
 - 第一遍听写：当前句临时 UI 状态；支持草稿、空白提交、逐词差异和提前查看确认，不保存评分或听写历史。
 - 词典：Longman 基础 URL 只在 `mvp.js` 的 `LONGMAN_BASE_URL` 配置一次，新标签打开，不抓取词典内容。
 - 扩展接口：`materials` 与 `sentences` 是独立集合；以后导入 Cambridge 资料只需生成相同数据结构。
-- 资料库：递归索引 `data/IELTS` 中的 498 个 MP3。根目录包含 158 组 MP3 + LRC，分为 6 个系列，可依据 LRC 时间轴按完整英文句子学习；`电台节目`包含 Cambridge IELTS 4–20 的 340 个音频（272 个 Part/Section + 68 个完整 Test）。电台音频在取得 transcript 并完成逐句时间戳对齐前只显示“音频已就绪”，不会生成虚假句子或时间戳。Cambridge 21 仍显示 Waiting 状态。
+- 资料库：递归索引 `data/IELTS` 中的 498 个 MP3。根目录包含 158 组 MP3 + LRC，分为 6 个系列，可依据 LRC 时间轴按完整英文句子学习；`电台节目`包含 Cambridge IELTS 4–20 的 340 个音频（272 个 Part/Section + 68 个完整 Test），340 个 AI 英文 transcript 均已生成并可进入逐句学习。AI 转写仍需人工校对；Cambridge 21 因没有本地源文件而保持 Waiting 状态。
 - 导入清单：`data/library/` 保存 v1.2 提供的 308 个材料元数据；Authentic Listening 只接受用户合法拥有的原始音频。
 
 `data/IELTS/` 是本地资料目录，不纳入 Git。`meta/` 中的 504 张封面图片不计入听力材料。Cambridge 12 的本地文件名使用 Test 5–8，资料库中按顺序对应 Test 1–4；Cambridge 20 的源文件沿用 `Text1`–`Text4` 文件名。

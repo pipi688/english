@@ -179,6 +179,7 @@ dialog::backdrop{background:rgba(4,24,24,.62)}
 .collection-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:18px 0 24px;padding:26px;border-radius:16px;background:#153d3c;color:#fff}
 .collection-summary h2{margin:4px 0}.collection-summary p{margin:0;color:#c5d7d3}
 .waiting-pill{flex:0 0 auto;padding:8px 12px;border-radius:999px;background:#fff1cc;color:#76500a;font-size:12px;font-weight:800}
+.waiting-pill.ready{background:#dff3eb;color:#176b58}
 .test-list{display:grid;gap:14px}.test-group{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff}
 .test-group summary{display:flex;justify-content:space-between;gap:16px;padding:18px 22px;cursor:pointer}.test-group summary span{color:var(--muted);font-size:13px}
 .unit-section{padding:0 22px 18px}.unit-section h3{margin:8px 0 10px;font-size:14px;color:var(--muted)}
