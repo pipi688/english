@@ -18,6 +18,7 @@ macOS 也可以双击项目根目录的 `打开雅思学习工作台.command`，
 
 - UI：原生 HTML / CSS / JavaScript，无构建步骤、无第三方运行时依赖。
 - 持久化：浏览器 `localStorage`，键为 `ielts-sentence-lab-mvp-v1.1.1`。
+- 学习续接：保存最后学习材料、当前句号、已访问句数和听写草稿；资料库与顶部按钮均可继续上次学习。
 - Listening：测试材料为每个 Sentence 关联一段完整句子音频；播放时不会截断句首或句尾。
 - Reading：每句调用浏览器 Web Speech API 英语 TTS。
 - 第一遍听写：当前句临时 UI 状态；支持草稿、空白提交、逐词差异和提前查看确认，不保存评分或听写历史。
