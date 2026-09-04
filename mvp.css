@@ -144,7 +144,7 @@ dialog::backdrop{background:rgba(4,24,24,.62)}
 
 /* One full sentence and its vocabulary actions share the same main column. */
 .study-layout{display:block}
-.word-hint{margin:20px 0 0;color:var(--muted);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;font-size:14px}
+.word-hint{display:none}
 .selection-menu{margin-top:24px;padding:18px;border:1px solid #99cfc2;border-radius:12px;background:#eff8f5}
 .selection-menu strong{display:block;margin-bottom:12px;font-size:20px}
 .selection-actions{display:flex;flex-wrap:wrap;gap:10px}
