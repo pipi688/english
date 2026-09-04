@@ -1,122 +1,34 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="以 IELTS 7 为第一阶段目标，连接海外留学、求职、工作与生活的长期英语能力工作台。">
-  <title>Global English · 海外发展英语工作台</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="features.css">
-  <link rel="stylesheet" href="learning.css?v=3">
-  <link rel="stylesheet" href="wordbank.css?v=7">
-  <link rel="stylesheet" href="course-entry.css?v=5">
-  <link rel="stylesheet" href="sidebar-responsive.css?v=10">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IELTS Listening 与 Academic Reading 逐句音频学习平台">
+  <title>IELTS Sentence Lab</title><link rel="stylesheet" href="mvp.css?v=1.1.0">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
-  <div class="app-shell">
-    <aside class="sidebar" aria-label="主导航">
-      <div class="brand"><span class="brand-mark" aria-hidden="true">7</span><div><strong>Global English</strong><span>海外发展英语工作台</span></div></div>
-      <nav class="course-nav" aria-label="今日课程顺序">
-        <p class="nav-label">今日学习顺序</p>
-        <button class="nav-item active" data-route="overview"><span class="order-dot">0</span><span class="nav-copy"><strong>今日概览</strong><small>目标、比例与学习顺序</small></span></button>
-        <button class="nav-item" data-route="vocabulary"><span class="order-dot">1</span><span class="nav-copy"><strong>词汇与语法</strong><small>核心词不是背中文，而是学会在雅思语境中使用</small></span><span class="nav-duration">35 分钟</span></button>
-        <button class="nav-item" data-route="listening"><span class="order-dot">2</span><span class="nav-copy"><strong>听力精听</strong><small>先盲听，再核对文本，最后跟读</small></span><span class="nav-duration">40 分钟</span></button>
-        <button class="nav-item" data-route="reading"><span class="order-dot">3</span><span class="nav-copy"><strong>阅读精读</strong><small>训练定位、同义替换和证据意识</small></span><span class="nav-duration">40 分钟</span></button>
-        <button class="nav-item" data-route="writing"><span class="order-dot">4</span><span class="nav-copy"><strong>写作训练</strong><small>用清晰结构写出一个完整段落</small></span><span class="nav-duration">20 分钟</span></button>
-        <button class="nav-item" data-route="speaking"><span class="order-dot">5</span><span class="nav-copy"><strong>口语跟练</strong><small>录音、复听、重说，比默想有效</small></span><span class="nav-duration">15 分钟</span></button>
-        <button class="nav-item" data-route="practical"><span class="order-dot">6</span><span class="nav-copy"><strong>应用英语</strong><small>海外生活、留学与职场场景</small></span><span class="nav-duration">20 分钟</span></button>
-        <button class="nav-item" data-route="review"><span class="order-dot">7</span><span class="nav-copy"><strong>当日复盘</strong><small>记录错因和明天唯一的改进点</small></span><span class="nav-duration">10 分钟</span></button>
-        <button class="nav-item utility" data-route="progress"><span class="order-dot">↗</span><span class="nav-copy"><strong>成绩与设置</strong><small>模考、路线与数据备份</small></span></button>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#library"><span class="brand-mark">IS</span><span><strong>IELTS</strong><small>Sentence Lab</small></span></a>
+      <nav aria-label="主导航">
+        <a href="#library" data-route="library">资料库</a>
+        <a href="#study" data-route="study">逐句学习</a><a href="#vocabulary" data-route="vocabulary">生词本 <b id="vocabCount">0</b></a>
       </nav>
-      <div class="sidebar-note"><strong>你的长期目标</strong><p>IELTS 7 → 海外学习<br>求职工作 → 长期发展</p></div>
+      <div class="sidebar-note"><span class="status-dot"></span>数据保存在当前浏览器</div>
     </aside>
-
     <main id="main" tabindex="-1">
-      <header class="topbar">
-        <div><p class="eyebrow" id="dateLabel"></p><h1>今天，稳稳前进一步</h1></div>
-        <div class="header-actions">
-          <label class="time-select">今日时长<select id="dailyMinutes" aria-label="选择每日学习时长"><option value="120">2 小时</option><option value="150" selected>2.5 小时</option><option value="180">3 小时</option></select></label>
-          <button class="icon-button" id="resetButton" aria-label="重置今日任务" title="重置今日任务">↻</button>
-        </div>
-      </header>
-      <section id="lessonApp" class="lesson-app" tabindex="-1" aria-live="polite" aria-labelledby="lessonTitle"></section>
-
-      <section class="hero" id="today" aria-labelledby="heroTitle">
-        <div class="hero-copy"><span class="phase-pill" id="phasePill">第 1 阶段 · 基础重建</span><h2 id="heroTitle">第 <span id="dayNumber">1</span> 天 / 共 180 天</h2><p id="phaseMessage">先找回语感和学习节奏。准确，比速度更重要。</p><div class="hero-progress"><div><span>半年总进度</span><strong id="overallPercent">1%</strong></div><progress id="overallProgress" max="180" value="1">1 / 180</progress></div></div>
-        <div class="score-target" aria-label="目标分数"><span>目标总分</span><strong>7.0</strong><small>单项不低于 6.5</small></div>
-      </section>
-
-      <section class="stats" aria-label="学习概览">
-        <article><span class="stat-icon teal" aria-hidden="true">✓</span><div><small>今日完成</small><strong><span id="doneMinutes">0</span> / <span id="totalMinutes">150</span> 分钟</strong></div></article>
-        <article><span class="stat-icon orange" aria-hidden="true">◷</span><div><small>连续学习</small><strong><span id="streakDays">0</span> 天</strong></div></article>
-        <article><span class="stat-icon blue" aria-hidden="true">◎</span><div><small>最近模考</small><strong id="latestScore">尚未记录</strong></div></article>
-      </section>
-
-      <section class="panel setup-panel" id="setup" aria-labelledby="setupTitle">
-        <div class="section-head"><div><p class="eyebrow">PERSONAL PLAN</p><h2 id="setupTitle">备考设置</h2></div><span id="examCountdown">设置考试日期后显示倒计时</span></div>
-        <form id="setupForm" class="setup-form">
-          <label>计划开始日期<input id="startDate" type="date" required></label>
-          <label>预计考试日期<input id="examDate" type="date"></label>
-          <fieldset><legend>当前最弱项</legend><label><input type="radio" name="weakSkill" value="listening">听力</label><label><input type="radio" name="weakSkill" value="reading">阅读</label><label><input type="radio" name="weakSkill" value="writing">写作</label><label><input type="radio" name="weakSkill" value="speaking">口语</label></fieldset>
-          <button class="secondary-button" type="submit">保存设置</button>
-        </form>
-        <p class="plan-advice" id="planAdvice">完成一次基线模考后，选择最弱项；系统会在每日计划中提醒你优先投入。</p>
-      </section>
-
-      <div class="content-grid">
-        <section class="panel task-panel" aria-labelledby="tasksTitle">
-          <div class="section-head"><div><p class="eyebrow">TODAY'S PLAN</p><h2 id="tasksTitle">今日学习清单</h2></div><span id="taskCount">0 / 4 完成</span></div>
-          <div id="taskList" class="task-list"></div>
-        </section>
-
-        <aside class="panel focus-panel" aria-labelledby="focusTitle">
-          <div class="section-head"><div><p class="eyebrow">FOCUS TIMER</p><h2 id="focusTitle">专注计时</h2></div></div>
-          <div class="timer-ring" id="timerRing"><div><strong id="timerDisplay">25:00</strong><span id="timerStatus">准备开始</span></div></div>
-          <div class="timer-presets" role="group" aria-label="计时长度"><button data-time="25" class="active">25 分钟</button><button data-time="45">45 分钟</button><button data-time="60">60 分钟</button></div>
-          <button class="primary-button" id="timerToggle">开始专注</button>
-          <p class="focus-tip">建议：每完成一轮，休息 5–10 分钟。听力与阅读用 45–60 分钟完整训练。</p>
-        </aside>
-      </div>
-
-      <section class="panel roadmap" id="roadmap" aria-labelledby="roadmapTitle">
-        <div class="section-head"><div><p class="eyebrow">6-MONTH ROADMAP</p><h2 id="roadmapTitle">半年路线图</h2></div><p>每 4 周复盘一次，每 8 周做一次完整模考</p></div>
-        <div class="phases" id="phaseList"></div>
-      </section>
-
-      <section class="panel weekly-review" id="review" aria-labelledby="reviewTitle">
-        <div class="section-head"><div><p class="eyebrow">WEEKLY REVIEW</p><h2 id="reviewTitle">每周学习复盘</h2></div><strong id="weekRate">本周完成率 0%</strong></div>
-        <div class="week-strip" id="weekStrip" aria-label="最近七天完成情况"></div>
-        <form id="reviewForm" class="review-form">
-          <label>本周最大的进步<textarea id="weeklyWin" rows="3" placeholder="例如：能听清 Section 1 的地址和数字了"></textarea></label>
-          <label>反复出现的问题<textarea id="weeklyBlock" rows="3" placeholder="例如：阅读判断题总是凭印象选答案"></textarea></label>
-          <label>下周只改进一件事<input id="nextFocus" type="text" placeholder="例如：每天精听后做 10 分钟跟读"></label>
-          <button class="primary-button" type="submit">保存本周复盘</button>
-        </form>
-        <p class="autosave-note">草稿会自动保存在当前浏览器。</p>
-      </section>
-
-      <section class="two-column">
-        <section class="panel" id="scores" aria-labelledby="scoreTitle">
-          <div class="section-head"><div><p class="eyebrow">MOCK TESTS</p><h2 id="scoreTitle">模考记录</h2></div></div>
-          <form id="scoreForm" class="score-form"><label>日期<input id="scoreDate" type="date" required></label><label>听力<input id="listeningScore" type="number" min="0" max="9" step="0.5" value="5"></label><label>阅读<input id="readingScore" type="number" min="0" max="9" step="0.5" value="5"></label><label>写作<input id="writingScore" type="number" min="0" max="9" step="0.5" value="4.5"></label><label>口语<input id="speakingScore" type="number" min="0" max="9" step="0.5" value="4.5"></label><button class="secondary-button" type="submit">保存成绩</button></form>
-          <div id="scoreHistory" class="score-history" aria-live="polite"></div>
-        </section>
-        <section class="panel" id="resources" aria-labelledby="resourceTitle">
-          <div class="section-head"><div><p class="eyebrow">START HERE</p><h2 id="resourceTitle">学习原则与资源</h2></div></div>
-          <ul class="principles"><li><strong>输入 60%</strong><span>精听 + 精读，先保证理解正确</span></li><li><strong>输出 30%</strong><span>写作仿写 + 口语录音复盘</span></li><li><strong>复盘 10%</strong><span>错题只记“错因 + 正确思路”</span></li></ul>
-          <details><summary>推荐材料（按优先级）</summary><p>剑桥雅思真题 12–19、IELTS Liz / Simon 写作框架、BBC Learning English、Anki 高频词组。前 4 周不要盲目刷整套题。</p></details>
-        </section>
-      </section>
-      <section class="panel data-panel" aria-labelledby="dataTitle">
-        <div><p class="eyebrow">DATA BACKUP</p><h2 id="dataTitle">数据备份</h2><p>导出 JSON 文件，换浏览器或清理缓存后可以恢复全部记录。</p></div>
-        <div class="data-actions"><button class="secondary-button" id="exportData" type="button">导出学习数据</button><label class="file-button">导入学习数据<input id="importData" type="file" accept="application/json"></label></div>
-      </section>
-      <footer>所有数据仅保存在当前浏览器 · 建议每周日截图留档</footer>
+      <header class="topbar"><button id="mobileMenu" class="icon-btn menu-btn" aria-label="打开菜单">☰</button><div><p class="eyebrow" id="pageEyebrow">YOUR LIBRARY</p><h1 id="pageTitle">资料库</h1></div><button class="quiet-btn" id="quickContinue">▶ 继续学习</button></header>
+      <div id="app" aria-live="polite"></div>
     </main>
   </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=3" defer></script>
-  <script src="learning.js?v=12" defer></script>
-</body>
-</html>
+  <dialog id="vocabDialog" aria-labelledby="vocabDialogTitle"><form method="dialog" id="vocabForm" class="modal-card">
+    <div class="modal-head"><div><p class="eyebrow">VOCABULARY</p><h2 id="vocabDialogTitle">添加到生词本</h2></div><button value="cancel" class="icon-btn" aria-label="关闭">×</button></div>
+    <label>Word / Phrase<input id="vocabText" required readonly></label>
+    <label>English Definition<textarea id="vocabDefinition" rows="4" required placeholder="从 Longman 选择符合当前语境的英文释义，并手动粘贴到这里"></textarea></label>
+    <div class="read-only"><span>Original Sentence</span><p id="vocabSentence"></p></div><div class="read-only"><span>Source</span><p id="vocabSource"></p></div>
+    <button type="button" class="audio-preview" id="vocabAudio">🔊 播放 Original Sentence Audio</button>
+    <div class="modal-actions"><button value="cancel" class="secondary-btn">取消</button><button type="button" id="saveVocab" class="primary-btn">保存</button></div>
+  </form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="mvp.js?v=1.1.0" defer></script>
+</body></html>
