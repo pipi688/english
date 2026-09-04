@@ -29,6 +29,14 @@ macOS 也可以双击项目根目录的 `打开雅思学习工作台.command`，
 
 `data/IELTS/` 是本地资料目录，不纳入 Git。`meta/` 中的 504 张封面图片不计入听力材料。Cambridge 12 的本地文件名使用 Test 5–8，资料库中按顺序对应 Test 1–4；Cambridge 20 的源文件沿用 `Text1`–`Text4` 文件名。
 
+### 重新连接本地资料
+
+如果项目里的 `data` 文件夹被删除，可先从云端把资料下载到电脑，再在“资料库 → 本地资料文件夹”点击“导入 / 重新连接 data 文件夹”。可以选择完整的 `data` 文件夹，也可以直接选择其中的 `IELTS` 文件夹。
+
+- 导入不会复制或上传文件，浏览器会直接读取所选目录中的 LRC、transcript JSON 和 MP3。
+- 文件夹授权保存在当前浏览器配置中；浏览器收回权限后，资料库会提示重新授权。
+- 持久文件夹授权使用 File System Access API，请通过 `http://localhost:8080` 在 Chrome、Edge 或 Codex 内置浏览器中运行。
+
 ## 本地英文转写
 
 `scripts/transcribe_ielts.py` 使用本机 `whisper.cpp` 为 `电台节目`中的340个MP3生成带时间戳英文原文。脚本支持断点续跑，结果保存在本地 `data/IELTS/transcripts/`。这些内容属于 AI 自动转写，进入学习页时会标记“待校对”，不能视为官方 audioscript。
