@@ -26,6 +26,10 @@ python3 -m http.server 8080
 
 `data/IELTS/` 是本地资料目录，不纳入 Git。`meta/` 中的 504 张封面图片不计入听力材料。Cambridge 12 的本地文件名使用 Test 5–8，资料库中按顺序对应 Test 1–4；Cambridge 20 的源文件沿用 `Text1`–`Text4` 文件名。
 
+## 本地英文转写
+
+`scripts/transcribe_ielts.py` 使用本机 `whisper.cpp` 为 `电台节目`中的340个MP3生成带时间戳英文原文。脚本支持断点续跑，结果保存在本地 `data/IELTS/transcripts/`。这些内容属于 AI 自动转写，进入学习页时会标记“待校对”，不能视为官方 audioscript。
+
 ## 数据模型
 
 ```text
