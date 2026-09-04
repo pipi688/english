@@ -12,6 +12,8 @@ python3 -m http.server 8080
 
 打开 <http://localhost:8080>。无需账号、会员、API 或云服务。
 
+macOS 也可以双击项目根目录的 `打开雅思学习工作台.command`，它会启动本地服务器并打开资料库。不要直接用 `file://` 运行应用；页面检测到这种打开方式时会自动转到 `http://localhost:8080`。
+
 ## 技术架构
 
 - UI：原生 HTML / CSS / JavaScript，无构建步骤、无第三方运行时依赖。
