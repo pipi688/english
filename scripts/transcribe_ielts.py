@@ -22,6 +22,7 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--reverse", action="store_true")
     args = parser.parse_args()
 
     if not MODEL.is_file():
@@ -29,6 +30,8 @@ def main() -> int:
 
     TRANSCRIPT_DIR.mkdir(parents=True, exist_ok=True)
     files = sorted(AUDIO_DIR.glob("*.mp3"))
+    if args.reverse:
+        files.reverse()
     if args.limit:
         files = files[: args.limit]
 
