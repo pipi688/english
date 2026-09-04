@@ -60,10 +60,3 @@ DictationState（当前句临时状态）
 
 VocabularyItem 刻意不包含中文词义、Added Date、熟练度、SRS 或 Active/Passive/Mastered 状态。
 听写刻意不包含分数、正确率、等级、排行榜或历史 Attempts 表。
-
-## 测试数据
-
-- Listening：`Riverside Visitor Centre`，12 句，每句均有完整独立音频。
-- Academic Reading：`Green Spaces in Modern Cities`，15 句，逐句英语 TTS。
-
-测试文本与音频均为本项目自制测试内容，不包含 Cambridge IELTS 受版权保护材料。
