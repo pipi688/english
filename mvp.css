@@ -187,4 +187,6 @@ dialog::backdrop{background:rgba(4,24,24,.62)}
 .material-row.audio-ready{background:#f5fbf8}
 .material-row.audio-ready p{color:#176b58;font-weight:700}
 .material-row.audio-ready button:disabled{background:#e1f4ed;color:#176b58}
+.local-episode-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding-top:16px}
+.local-episode-grid button{width:100%}
 @media(max-width:700px){.library-grid{grid-template-columns:1fr}.collection-summary{align-items:flex-start;flex-direction:column}.material-row{grid-template-columns:1fr}.material-row button{width:100%}}
