@@ -21,8 +21,10 @@ python3 -m http.server 8080
 - 第一遍听写：当前句临时 UI 状态；支持草稿、空白提交、逐词差异和提前查看确认，不保存评分或听写历史。
 - 词典：Longman 基础 URL 只在 `mvp.js` 的 `LONGMAN_BASE_URL` 配置一次，新标签打开，不抓取词典内容。
 - 扩展接口：`materials` 与 `sentences` 是独立集合；以后导入 Cambridge 资料只需生成相同数据结构。
-- 资料库：包含 Official IELTS Samples 与 Cambridge IELTS 11–21 Academic 的完整占位结构，共 44 Tests、176 Listening Parts、132 Reading Passages。缺少合法源文件时只显示 Waiting 状态。
+- 资料库：包含 Official IELTS Samples 与 Cambridge IELTS 11–21 Academic 的完整占位结构，共 44 Tests、176 Listening Parts、132 Reading Passages。本地 `data/IELTS` 已关联 Cambridge 11–20 的 160 个 Listening Part 原始音频；这些音频在取得 transcript 并完成逐句时间戳对齐前，只显示“音频已就绪”，不会生成虚假句子或时间戳。Cambridge 21 与 Reading 材料仍显示 Waiting 状态。
 - 导入清单：`data/library/` 保存 v1.2 提供的 308 个材料元数据；Authentic Listening 只接受用户合法拥有的原始音频。
+
+`data/IELTS/` 是本地资料目录，不纳入 Git。Cambridge 12 的本地文件名使用 Test 5–8，资料库中按顺序对应 Test 1–4；Cambridge 20 的源文件沿用 `Text1`–`Text4` 文件名。
 
 ## 数据模型
 
